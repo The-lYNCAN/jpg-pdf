@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <title>Index page</title>
+</head>
+<style>
+    .bottomright {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+  font-size: 18px;
+}
+</style>
+<body>
+{% load static %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="http://lyncans.pythonanywhere.com">lYNCAN</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+</nav>
+<div class="container">
+    {% load crispy_forms_tags %}
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form|crispy}}
+    <!--{{form.image}}-->
+    <input type="submit" value="submit" class="btn btn-primary mb-2">
+</form>
+    <iframe width="1200" height="600" src="https://www.youtube.com/embed/JcVJRhYK2tk">
+</iframe>
+    <h1>
+        How to use The site?
+    </h1>
+    <ol>
+        <li>First Create a new directory and arrange the file in series of the way you want your pdf (i.e. first page you can select at wish, then the second page should be on th first place in the folder, third page second picture in the folder)</li>
+        <li>Upload the first image using the "choose file" button above</li>
+        <li>Press "Next" button</li>
+        <li>Choose all the images you want to display in the pdf in a single click (Please watch the video) on the next page</li>
+        <li>Click "Download" button to download the pdf</li>
+        <li>Thank you! and Please Share the website!</li>
+    </ol>
+</div>
+
+
+</body>
+</html>
